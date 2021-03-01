@@ -1,0 +1,41 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+</head>  
+<body style = "text-align: center; font-size: 20px;">  
+<h1> Even and Odd numbers up to n </h1>  
+Enter a number: <input id = "num">  
+<br><br>  
+<button onclick = "res()"> Get Result </button>  
+<p id = "res1"></p>  
+<p id="res2"></p>
+<script>  
+let res=()=>{  
+var num;
+num = document.getElementById("num").value;  
+odd(num);
+even(num);
+}  
+
+let odd=(num) =>{
+    var num1=[];
+  for (let i=1; i<num; i++) {
+    if(i % 2 !== 0) {
+        num1.push(i); 
+    }
+  }
+  document.getElementById("res1").innerHTML = "Odd Numbers are: "+num1;  
+}
+
+let even=(num) =>{
+    var num2=[];
+  for (let i=1; i<num; i++) {
+    if(i % 2 === 0) {
+      num2.push(i);
+    }
+  }
+  document.getElementById("res2").innerHTML = "Even Numbers are: "+num2;  
+}
+</script>  
+</body>  
+</html>
